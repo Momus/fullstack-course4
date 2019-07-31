@@ -1,3 +1,5 @@
+##### The completed assignments for this course may be viewed [here](https://momus.github.io/fullstack-course4/).
+
 # Coursera: HTML, CSS and Javascript for Web Developers
 ## Example Source Code
 This repository contains all of the example source code used in the Coursera.org course called
