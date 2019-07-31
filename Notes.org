@@ -1,0 +1,130 @@
+* Useful Setup Tricks
+*** Browser Sync
+    - from Google https://www.browsersync.io/
+    - install:
+      #+BEGIN_SRC sh
+      npm install -g browser-sync
+      #+END_SRC
+    - start:
+      #+BEGIN_SRC sh :directory ./docs
+      browser-sync start --server --directory --files "*" &
+      #+END_SRC
+* Useful HTML tricks
+*** Lists
+    - anything in a <ul> element that's not a <li> is not allowed
+*** Charecters
+***** Always Use Entities:
+      - < :: &lt;
+      - > :: &gt;
+      - & :: &amp;
+      - (c) :: &copy;
+      - space :: &nbsp; don't use just for spacing, use a span.
+      - quote :: &quote;
+***** 
+* CSS3
+*** CSS Rule
+***** selector
+******* element
+        - specified by a string: p
+******* class
+        - specified by a dot: .blue {color: blue;}
+        - used without dot: <p class="blue">...</p>
+******* id
+        - specified by a hash: #name { color: blue;}
+        - also used without hash: <div id="name">...</div>
+******* grouping selectors:
+        #+BEGIN_SRC css
+          div, .blue {
+              color: blue;
+          }
+        #+END_SRC
+******* combining selectors
+********* element with class slector
+          #+BEGIN_SRC css
+            /*Every p that has class="big" */
+            p.big {
+                font-size: 20px;
+          #+END_SRC
+********* child direct selector
+          #+BEGIN_SRC css
+          article > p { color: rebeccapurple;
+          #+END_SRC
+          #+BEGIN_SRC html
+            <article> <p> affected text </p> </article>
+            <p> unaffected text </p>
+            <article><div><p>affected text</p></div></article>
+          #+END_SRC
+********* descendant selector
+          Every x that isinside (at any level) of y
+          #+BEGIN_SRC css
+          article p { color: pink; }
+          #+END_SRC
+          #+BEGIN_SRC html
+          
+          #+END_SRC
+********* adjacent sibling selector (selector + selector)
+********* general sibling selector (selector - selector)
+******* pseudo-class selector
+        #+BEGIN_SRC css
+        selector:pseudo-class
+        #+END_SRC
+        there are many.  amongs them:
+        - :link
+        - :visited
+        - :hover
+        - :active
+        - :nth-child(...)
+          #+BEGIN_SRC css
+            /* will affect the third list item*/
+            header li:nth-child(3){font-size: 24px;}
+            /* apply to evey other element */
+            section div:nth-child(odd){background-color: grey;}
+            /* combine pseudo selecectors */
+            section div:nth-child(4):hover {color: chartreuse; cursor: pointer;}
+          #+END_SRC
+***** braces
+***** declaration
+******* property
+******* colon
+******* value
+******* semicolon
+*** Style Placement
+***** in header, in line, in a css sheet
+      don't use inline, use a css sheet
+*** Conflict Resolution
+***** Cascade Algorithm: the core of CSS
+******* Origin
+        the LAST declatation wins:
+        styles below on page, overide those above
+******* Merge
+        when styles don't conflict, they combine
+******* Inheritance
+        all children and grand children of element will inherit
+        property
+******* Specificiy
+        Most specific selector combination wins
+        style="" > ID > class, pseudoclass, attribute > number of elements
+******* !important
+        overrides other CSS styles
+        #+BEGIN_SRC css
+        p {color: darkseagreen !important;}
+        #+END_SRC
+***** 
+*** Styling Text
+***** font-family
+      provide some options
+***** color
+      color names for testing, hex values for production (why?)
+***** font-weight
+      normal to bold (900)
+***** font-size
+***** text-transform
+      capitalize, lowecase, et c.
+***** justification
+***** relative font sizing
+******* %
+        120% = 120% bigger than default (usuall 16 pixels)
+******* ems
+        2em text is twice the size of the letter M
+******* relative font sizes are cumulative!
+        decrease it to get back to default
