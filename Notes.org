@@ -128,3 +128,11 @@
         2em text is twice the size of the letter M
 ******* relative font sizes are cumulative!
         decrease it to get back to default
+*** Box Model
+    - padding
+    - border
+    - margins
+***** border-box vs content-box
+      stay with border box, content-box is default in plain browsers,
+      border-box in frameworks (boot strap) so just indicate border
+      box to save on confusion.
