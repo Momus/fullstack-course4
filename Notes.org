@@ -185,6 +185,10 @@
 *** REMEBER NOT TO OVERLAP BREAKPOINTS
 *** Responsive Layouts
 ***** 12 column grid --- used by most responsive designs
+      - 1 column :: 100%
+      - 12 columns :: each 8.33% * 12 = 100%
+      - 4 columns :: 25% et c.
+      - nested grids :: inside each column you can nest more grids
 *** viewport metatag:
     tells devices our page is responsive, and not to zoom it out automatically
     #+BEGIN_SRC html

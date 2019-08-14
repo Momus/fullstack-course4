@@ -4,13 +4,50 @@ h1, h2 {
 
 h1 {
     font-size: 175%;
+    text-align: center;
+}
+
+div.box {
+    position: relative;
+    background-color: lightsalmon;
+    border: 1px solid;
+    margin: 1em;
+
+}
+
+div.content {
+    /* position: relative; */
+    padding-top: 1em;
+    padding-left: 1em;
+    padding-right: 1em;
 }
 
 h2 {
-    font-size: 125%
+    font-size: 125%;
+    position: absolute;
+    top: 0;
+    right :0;
+    border: 1px solid;
+    margin: 0px;
+    width: 25%;
+    text-align: center;
+    box-sizing: border-box;
 }
+
 p {
     font-family: serif;
+}
+
+#title_1 {
+    background-color: rebeccapurple;
+}
+
+#title_2{
+    background-color: hotpink;
+}
+
+#title_3 {
+    background-color: seagreen;
 }
 
 @media (min-width: 992) {
