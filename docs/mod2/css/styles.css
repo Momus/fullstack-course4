@@ -1,2 +1,31 @@
-html {
+h1, h2 {
+    font-family: sans-serif;
+}
+
+h1 {
+    font-size: 175%;
+}
+
+h2 {
+    font-size: 125%
+}
+p {
+    font-family: serif;
+}
+
+@media (min-width: 992) {
+    p {
+        font-family: serif;
+    }
+}
+
+@media (min-width: 768) and (max-width: 991px) {
+    p {
+        font-family: serif;
+    }
+} 
+
+@media (max-width: 767px) {
+    p {font-family: serif;
+      }
 }
