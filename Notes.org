@@ -136,3 +136,59 @@
       stay with border box, content-box is default in plain browsers,
       border-box in frameworks (boot strap) so just indicate border
       box to save on confusion.
+***** use STAR * selector because body-box property isn't inheritable
+      - * (strar) :: appleis proberty and values to _every_ element.
+***** can I use?  caniuse.com
+***** cumulative margins:
+      margins collapse top and down, and the smaller margin collapses
+***** overdflow:  what happens when there's too much test for your box
+      - auto :: puts scroll bars as needed
+      - scroll :: bars always visiable
+***** background: lots of fun properties
+      - bacground-image :: can specify a file (URL relative to CSS file)
+      - background-repeat :: repeat x, y, or no repeat
+      - background-position :: will default other posotions in the center
+      
+*** position elements by floating
+    most UIs made today are made by floating
+    - margins never collapse
+    - floating elements takes them out of the normall document flow
+    - use the 'clear' attribute to resume document flow
+
+*** relative and absolute positioning
+    - static posotioning: standard for all, excelt html
+    - relative positioning
+      - properties :: left, right, etc.
+      - FROM top and FROM left :: still in document flow. can use
+           negative values
+    - absulute :: all ofsets are relative to the position
+    - document flow :: absolute postioning takes element out of it
+*** COMMENT Media Queries
+    - @media (max-width: 767 px) { p { clolor: blue; }}
+    - possible targets:
+      - max-width:
+      - min-width:
+      - orientation:
+      - secreen
+      - print:
+    - can be combined using logical operators
+      #+BEGIN_SRC css
+        @media (min-width: 768) and (max-width: 991px) {p {font-family: serif;}}
+      #+END_SRC
+    - comma is equivalent to an "OR" operator
+      #+BEGIN_SRC css
+        @media (max-width: 767px) , (min-width: 992) {...}
+      #+END_SRC
+    - base stylles apply to media queries, so define them first.
+    - 
+*** different devices sizes:  twitter bootstrap has defined ranges
+*** REMEBER NOT TO OVERLAP BREAKPOINTS
+*** Responsive Layouts
+***** 12 column grid --- used by most responsive designs
+*** viewport metatag:
+    tells devices our page is responsive, and not to zoom it out automatically
+    #+BEGIN_SRC html
+      <meta name="viewport" content="width=device-width, initial-scale=1'>
+    #+END_SRC
+
+*** 
