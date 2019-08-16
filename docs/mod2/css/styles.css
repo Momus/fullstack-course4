@@ -7,11 +7,16 @@ h1 {
     text-align: center;
 }
 
+p {
+    font-family: serif;
+}
+
 div.box {
     position: relative;
     background-color: lightsalmon;
     border: 1px solid;
     margin: 1em;
+    float: left;
 
 }
 
@@ -33,36 +38,50 @@ h2 {
     text-align: center;
     box-sizing: border-box;
 }
-
-p {
-    font-family: serif;
-}
-
-#title_1 {
+#chicken {
     background-color: rebeccapurple;
 }
-
-#title_2{
+#beef {
     background-color: hotpink;
 }
-
-#title_3 {
+#sushi {
     background-color: seagreen;
 }
 
+/* Breakpoints for viewers. */
 @media (min-width: 992) {
-    p {
-        font-family: serif;
+    .col-1-lg {
+        width: 33.3%;
     }
-}
+    #second {
+        width: 66.6%;
+    }
+    #third {
+        width: 100%;
+    }
 
 @media (min-width: 768) and (max-width: 991px) {
-    p {
-        font-family: serif;
+    .col-1-lg {
+        width: 33%;
     }
+    .col-2-lg {
+        width: 66%;
+    }
+    .col-3-lg {
+        width: 100%;
+    }
+   
 } 
 
 @media (max-width: 767px) {
-    p {font-family: serif;
-      }
+    .col-1-lg {
+        width: 33%;
+    }
+    #second {
+        width: 66%;
+    }
+    #third {
+        width: 100%;
+    }
+
 }
