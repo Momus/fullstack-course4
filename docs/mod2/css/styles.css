@@ -13,7 +13,7 @@ p {
 
 div.box {
     position: relative;
-    background-color: lightsalmon;
+    /* background-color: lightsalmon; */
     border: 1px solid;
     margin: 1em;
     float: left;
@@ -49,18 +49,20 @@ h2 {
 }
 
 /* Breakpoints for viewers. */
-@media (min-width: 992) {
+@media (min-width: 992px) {
     .col-1-lg {
-        width: 33.3%;
+        width: 29%;
+        background-color: blue;
     }
-    #second {
-        width: 66.6%;
+    .col-2-lg {
+        width: 29%;
+        background-color: pink;
     }
-    #third {
-        width: 100%;
+    .col-3-lg {
+        width: 29%;
     }
 
-@media (min-width: 768) and (max-width: 991px) {
+@media (min-width: 768px) and (max-width: 991px) {
     .col-1-lg {
         width: 33%;
     }
