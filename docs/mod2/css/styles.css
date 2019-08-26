@@ -1,3 +1,12 @@
+.container {
+    display: grid;
+    grid-gap: 1.5em;
+    padding: 1.5em;
+}
+
+
+/* Sans-sefif fonts should be used for headlines, Serifed fonts for
+   text, and Comic Sans--NEVER */
 h1, h2 {
     font-family: sans-serif;
 }
@@ -7,37 +16,28 @@ h1 {
     text-align: center;
 }
 
+.box {
+    
+    background-color: lightgrey;
+    border: 1px solid black;
+}
+
 p {
     font-family: serif;
 }
 
-div.box {
-    position: relative;
-    /* background-color: lightsalmon; */
-    border: 1px solid;
-    margin: 1em;
-    float: left;
-
-}
-
-div.content {
-    /* position: relative; */
-    padding-top: 1em;
-    padding-left: 1em;
-    padding-right: 1em;
-}
-
 h2 {
+    height: 1.5em;
     font-size: 125%;
-    position: absolute;
+    float: right;
     top: 0;
-    right :0;
     border: 1px solid;
     margin: 0px;
-    width: 25%;
+    min-width: 7em;
     text-align: center;
-    box-sizing: border-box;
+
 }
+
 #chicken {
     background-color: rebeccapurple;
 }
@@ -48,42 +48,42 @@ h2 {
     background-color: seagreen;
 }
 
+.content {
+    padding: 1.50em .5em 0em .5em;
+}
+
+#first {grid-area: chick;}
+#second {grid-area: beef;}
+#third {grid-area: sushi;} 
+
+
 /* Breakpoints for viewers. */
 @media (min-width: 992px) {
-    .col-1-lg {
-        width: 29%;
-        background-color: blue;
+    .container {
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-areas: "chick beef sushi";
+        grid-template-rows: auto;
     }
-    .col-2-lg {
-        width: 29%;
-        background-color: pink;
-    }
-    .col-3-lg {
-        width: 29%;
-    }
-
+}
 @media (min-width: 768px) and (max-width: 991px) {
-    .col-1-lg {
-        width: 33%;
+
+    .container {
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas:
+            "chick beef"
+            "sushi sushi";
     }
-    .col-2-lg {
-        width: 66%;
-    }
-    .col-3-lg {
-        width: 100%;
-    }
-   
 } 
 
 @media (max-width: 767px) {
-    .col-1-lg {
-        width: 33%;
-    }
-    #second {
-        width: 66%;
-    }
-    #third {
-        width: 100%;
+    .container {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+        grid-template-areas:
+                "chick" 
+                "beef"
+                "sushi";
+
     }
 
 }
