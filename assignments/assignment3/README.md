@@ -1,4 +1,4 @@
-#### [Solution](https://momus.github.io/fullstack-course4/mod2/)
+#### [Solution](https://momus.github.io/fullstack-course4/mod3/)
 
 # Module 3 Coding Assignment
 
