@@ -1,0 +1,19 @@
+.bg-grey {
+    background-color: lightslategrey;
+}
+nav{
+    padding: 0 !important;
+}
+.navbar-brand{
+    padding: .75em;
+}
+.nav-link{
+    font-weight: bold;
+    color: black !important;
+}
+h2{
+    padding-top: .5em;
+}
+h4{
+    padding: .5em;
+}
