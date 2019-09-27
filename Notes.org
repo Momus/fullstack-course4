@@ -196,3 +196,6 @@
     #+END_SRC
 
 *** 
+* Ajax Basics
+  Asynchronous Javascript and XML
+*** How can JS, a synchronous language, be asynchronous?
