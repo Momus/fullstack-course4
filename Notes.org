@@ -194,5 +194,17 @@
     #+BEGIN_SRC html
       <meta name="viewport" content="width=device-width, initial-scale=1'>
     #+END_SRC
-
+* javaScript
+*** primitive types
+    - boolean :: can be true or false
+    - undefined :: built in keyword.  built in value for something that
+      hasn't been given a value.  Don't set this yourself because it
+      would contradict the meaning of this datatype.
+    - null :: signifies lack of value.
+    - number :: always represented as a double-precision 64-bit
+                floating point.
+      - JS does _not_ have an integer type.  Ints are a subset of
+        doubles instead of a seprte type.
+    - strings :: use either single or double quotes
+    - symbol :: new to EC6
 *** 
