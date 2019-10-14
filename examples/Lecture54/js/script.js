@@ -2,7 +2,7 @@
 document.addEventListener("DOMContentLoaded",
   function (event) {
     
-    function sayHello (event) {
+      function sayHello (event) {
       this.textContent = "Said it!";
       var name =
        document.getElementById("name").value;

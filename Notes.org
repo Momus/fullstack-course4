@@ -208,3 +208,6 @@
     - strings :: use either single or double quotes
     - symbol :: new to EC6
 *** 
+* Ajax Basics
+  Asynchronous Javascript and XML
+*** How can JS, a synchronous language, be asynchronous?

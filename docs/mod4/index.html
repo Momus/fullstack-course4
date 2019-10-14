@@ -2,7 +2,7 @@
 <html>
 <head>
   <meta charset="utf-8">
-  <title>Module 4 Solution Starter</title>
+  <title>Module 4 Solution</title>
   <script>
     var names = []; // DO NOT REMOVE
   </script>
@@ -11,6 +11,28 @@
   <script src="script.js"></script>
 </head>
 <body>
-  <h1>Module 4 Solution Starter</h1>
+  <h1>Module 4 Solution: "Hard"</h1>
+  <p>Please note that the requred solution appears in the JavaScript
+    console, not on the web page.</p><p>If you right click on the web page, select "Inspect Element," then click on the "Console" in the window that appears, you should see something like this:</p>
+  <div id="solution" style="font-family:monospace"></div>
+  <script type="text/javascript">
+    <!--
+    // This basically re-creates script.js and the "say" functions
+    // because they log to console instead of returning a string.
+    const thoseNames = ["Yaakov", "John", "Jen", "Jason", "Paul", "Frank",
+                 "Larry", "Paula", "Laura", "Jim"];
+    const bye = function (name) {return "Good Bye " + name};
+    const hey = function (name) {return "Hello " + name};
+    var outstring = "";
+    thoseNames.forEach(function(name) {
+        var firstLetter = name.charAt(0).toLowerCase();
+        var isJ = (firstLetter == 'j')
+        outstring += (isJ ? bye(name) : hey(name)) + "<br>";
+    });
+    
+    document.getElementById('solution').innerHTML = outstring
+    -->
+  </script>
+
 </body>
 </html>
